@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>VIT Tech Fest — Tickets</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <nav><div class="brand">⚡ VIT Tech Fest</div><a href="/organizer">Organizer Portal</a></nav>
+  <main class="container">
+    <section class="hero">
+      <div>
+        <span class="pill">CAMPUS EVENT</span>
+        <h1>Event Ticketing<br>System</h1>
+        <p>Register once, receive a signed QR ticket, and check in instantly at the venue.</p>
+      </div>
+      <div class="event-card">
+        <h2 id="eventName">Loading event…</h2>
+        <p id="eventMeta"></p>
+        <strong id="seats"></strong>
+      </div>
+    </section>
+
+    <section class="panel">
+      <h2>Participant Registration</h2>
+      <form id="registrationForm">
+        <label>Name<input id="name" required placeholder="Your full name"></label>
+        <label>Email<input id="email" type="email" required placeholder="you@example.com"></label>
+        <label>Phone <span class="muted">(optional)</span><input id="phone" placeholder="+91…"></label>
+        <button type="submit">Register & Generate Ticket</button>
+      </form>
+      <div id="message" class="message hidden"></div>
+    </section>
+
+    <section id="ticket" class="panel hidden">
+      <h2>🎟️ Your Ticket</h2>
+      <p id="ticketText"></p>
+      <img id="qr" class="qr" alt="Signed QR ticket">
+      <p class="muted">Save this QR code. The organizer scans it at entry.</p>
+    </section>
+  </main>
+  <script src="/app.js"></script>
+</body>
+</html>

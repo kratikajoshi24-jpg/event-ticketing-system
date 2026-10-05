@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Organizer Check-In</title>
+  <link rel="stylesheet" href="/styles.css">
+  <script src="https://unpkg.com/html5-qrcode" defer></script>
+</head>
+<body>
+  <nav><div class="brand">⚡ Organizer Check-In</div><a href="/">Participant Portal</a></nav>
+  <main class="container narrow">
+    <section class="panel">
+      <h1>QR Entry Verification</h1>
+      <p class="muted">Enter the organizer key, then scan a QR ticket. A manual token field is provided as a testing fallback.</p>
+      <label>Organizer key<input id="key" type="password" placeholder="Organizer key"></label>
+      <button id="start">Start Scanner</button>
+      <div id="reader" class="reader"></div>
+      <label>Manual token<input id="manual" placeholder="Paste the QR token for local testing"></label>
+      <button id="manualBtn" class="secondary">Verify Manual Token</button>
+      <div id="result" class="result hidden"></div>
+    </section>
+
+    <section class="stats">
+      <div><b id="registered">—</b><span>Registered</span></div>
+      <div><b id="checked">—</b><span>Checked in</span></div>
+      <div><b id="remaining">—</b><span>Seats left</span></div>
+    </section>
+  </main>
+  <script src="/organizer.js"></script>
+</body>
+</html>
